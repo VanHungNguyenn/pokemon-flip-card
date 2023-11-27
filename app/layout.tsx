@@ -15,7 +15,7 @@ export default function RootLayout({
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body>
-				<main className='relative flex h-screen'>
+				<main className='relative h-screen'>
 					{children}
 					<div className='absolute bottom-3 left-0 right-0 flex justify-center text-2xl'>
 						This game owned by Laughing with Nextjs -

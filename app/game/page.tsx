@@ -19,6 +19,8 @@ const Game = () => {
 		}[]
 	>([])
 
+	console.log(numberCol)
+
 	useEffect(() => {
 		const initializeCards = () => {
 			const totalCards = numberCol * numberCol
@@ -47,18 +49,12 @@ const Game = () => {
 		}
 	}, [numberCol])
 
-	if (!numberCol) {
-		return <div>Level not found</div>
-	}
-
 	return (
-		<div className='flex items-center pt-10 flex-col w-full h-full text-center'>
-			<div className={`grid grid-cols-${numberCol} gap-3`}>
+		<div className='flex-1 flex items-center py-12 flex-col h-full'>
+			<div className={`grid grid-cols-${numberCol} gap-2 h-full`}>
 				{cards.map((item, index) => (
-					<div key={index}>
-						<Card
-							src={item.isFlipped ? item.src : imgIconBack.src}
-						/>
+					<div key={index} className='aspect-square w-full bg-red-50'>
+						Hahaaha
 					</div>
 				))}
 			</div>
